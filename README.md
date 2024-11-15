@@ -22,8 +22,9 @@ Kondisional (if-else), Validasi input
 ## 4. Events:
 A.ActionListener untuk tombol Cek
 ~~~
-private void cekButtonActionPerformed(java.awt.event.ActionEvent evt) {                                          
-   try {
+private void btnCekActionPerformed(java.awt.event.ActionEvent evt) {                                       
+        // TODO add your handling code here:
+        try {
          int angka = Integer.parseInt(inputField.getText());
          String hasil = "Angka " + angka;
 
@@ -46,22 +47,27 @@ private void cekButtonActionPerformed(java.awt.event.ActionEvent evt) {
      } catch (NumberFormatException e) {
          JOptionPane.showMessageDialog(this, "Masukkan angka yang valid!", "Error", JOptionPane.ERROR_MESSAGE);
      }
+
+    }
 ~~~
 B.KeyAdapter pada JTextField untuk membatasi input hanya angka
 ~~~
-if (!Character.isDigit(evt.getKeyChar())) {
+private void inputFieldKeyTyped(java.awt.event.KeyEvent evt) {                                    
+        // TODO add your handling code here:
+        if (!Character.isDigit(evt.getKeyChar())) {
          evt.consume();
      }
+    }
 ~~~
 5. Variasi:
 • Tambahkan fitur untuk memeriksa apakah angka tersebut adalah bilangan prima
 ~~~
 // Mengecek apakah angka prima
-    if (isPrime(angka)) {
+         if (isPrime(angka)) {
              hasil += " dan bilangan prima";
-    } else {
+         } else {
              hasil += " dan bukan bilangan prima";
-    }
+         }
 
 private boolean isPrime(int number) {
         if (number <= 1) return false;
@@ -81,7 +87,8 @@ private boolean isPrime(int number) {
 • Implementasikan FocusListener untuk membersihkan JTextField saat mendapatkan focus
 ~~~
 private void inputFieldFocusGained(java.awt.event.FocusEvent evt) {                                       
-   inputField.setText("");
+        // TODO add your handling code here:
+        inputField.setText("");
     } 
 ~~~
 
