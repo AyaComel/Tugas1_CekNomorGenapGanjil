@@ -86,7 +86,7 @@ private void inputFieldFocusGained(java.awt.event.FocusEvent evt) {
 ~~~
 
 ## Contoh Gambar Project Setelah di Run
-![](https://https://github.com/AyaComel/Tugas1_CekNomorGenapGanjil/blob/main/tugas1.png)
+![](https://github.com/AyaComel/Tugas1_CekNomorGenapGanjil/blob/main/tugas1.png)
  
 
 ## Indikator Penilaian:
